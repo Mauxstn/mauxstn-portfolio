@@ -1,4 +1,3 @@
-/* Allgemeine Stile */
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -14,10 +13,9 @@ body {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
-  text-align: center; /* Alle Inhalte im Container werden zentriert */
+  text-align: center;
 }
 
-/* Header */
 header {
   background-color: #fff;
   padding: 30px 0;
@@ -26,7 +24,7 @@ header {
 
 .nav-links {
   display: flex;
-  justify-content: center; /* Navigation links werden zentriert */
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -49,7 +47,6 @@ header {
   transform: translateY(-3px);
 }
 
-/* Hero Section */
 .hero {
   background-color: #f5f5f5;
   padding: 120px 0;
@@ -87,16 +84,8 @@ header {
   transform: translateY(-3px);
 }
 
-/* About Section */
 .about {
   padding: 80px 0;
-}
-
-.about h2 {
-  font-size: 48px;
-  color: #080808;
-  margin-bottom: 30px;
-  font-weight: 700;
 }
 
 .about p {
@@ -108,18 +97,9 @@ header {
   font-weight: 400;
 }
 
-/* Projects Section */
 .projects {
   background-color: #f5f5f5;
   padding: 80px 0;
-}
-
-.projects h2 {
-  font-size: 48px;
-  color: #080808;
-  text-align: center;
-  margin-bottom: 50px;
-  font-weight: 700;
 }
 
 .project-grid {
@@ -154,16 +134,8 @@ header {
   transform: translateY(-5px);
 }
 
-/* Contact Section */
 .contact {
   padding: 80px 0;
-}
-
-.contact h2 {
-  font-size: 48px;
-  color: #080808;
-  margin-bottom: 40px;
-  font-weight: 700;
 }
 
 .contact p {
@@ -189,7 +161,6 @@ header {
   transform: translateY(-3px);
 }
 
-/* Footer */
 footer {
   background-color: #146ef5;
   padding: 10px 0;
@@ -213,14 +184,6 @@ footer img.footer-logo {
   margin-left: 10px;
 }
 
-/* About Section - Skills & Tools */
-.about h3 {
-  font-size: 36px;
-  color: #080808;
-  margin-top: 50px;
-  font-weight: 500;
-}
-
 .about ul {
   list-style: none;
   padding: 0;
@@ -242,18 +205,10 @@ footer img.footer-logo {
   vertical-align: middle;
 }
 
-/* Lumina Section */
 .lumina-section {
   background-color: #f5f5f5;
   padding: 100px 0;
   text-align: center;
-}
-
-.lumina-section h1 {
-  font-size: 60px;
-  color: #080808;
-  font-weight: 700;
-  margin-bottom: 20px;
 }
 
 .lumina-section p {
@@ -262,9 +217,7 @@ footer img.footer-logo {
   font-weight: 400;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  /* Anpassung für kleinere Bildschirme */
   .nav-links {
     flex-direction: column;
     align-items: center;
@@ -288,10 +241,6 @@ footer img.footer-logo {
     padding: 15px 30px;
   }
 
-  .about h2, .projects h2, .contact h2 {
-    font-size: 36px;
-  }
-
   .project-grid {
     flex-direction: column;
   }
@@ -311,7 +260,6 @@ footer img.footer-logo {
 }
 
 @media (max-width: 480px) {
-  /* Anpassung für sehr kleine Bildschirme */
   .hero h1 {
     font-size: 36px;
   }
