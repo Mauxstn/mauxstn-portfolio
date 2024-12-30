@@ -14,6 +14,7 @@ body {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
+  text-align: center; /* Alle Inhalte im Container werden zentriert */
 }
 
 /* Header */
@@ -25,7 +26,7 @@ header {
 
 .nav-links {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; /* Navigation links werden zentriert */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -89,7 +90,6 @@ header {
 /* About Section */
 .about {
   padding: 80px 0;
-  text-align: center;
 }
 
 .about h2 {
@@ -157,7 +157,6 @@ header {
 /* Contact Section */
 .contact {
   padding: 80px 0;
-  text-align: center;
 }
 
 .contact h2 {
@@ -263,53 +262,81 @@ footer img.footer-logo {
   font-weight: 400;
 }
 
-/* Allgemeine Stile */
-body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  background-color: #fff;
-  color: #080808;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-display: swap;
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Anpassung für kleinere Bildschirme */
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .hero .btn-primary {
+    font-size: 18px;
+    padding: 15px 30px;
+  }
+
+  .about h2, .projects h2, .contact h2 {
+    font-size: 36px;
+  }
+
+  .project-grid {
+    flex-direction: column;
+  }
+
+  .project-card {
+    margin-bottom: 20px;
+  }
+
+  .contact .btn-primary {
+    font-size: 18px;
+    padding: 15px 30px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
 }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1200px;
-  text-align: center; /* Alle Inhalte im Container werden zentriert */
-}
+@media (max-width: 480px) {
+  /* Anpassung für sehr kleine Bildschirme */
+  .hero h1 {
+    font-size: 36px;
+  }
 
-/* Header */
-header {
-  background-color: #fff;
-  padding: 30px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+  .hero p {
+    font-size: 18px;
+  }
 
-.nav-links {
-  display: flex;
-  justify-content: center; /* Navigation links werden zentriert */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  .about p {
+    font-size: 20px;
+  }
 
-.nav-links li {
-  margin-left: 20px;
-}
+  .project-card h3 {
+    font-size: 24px;
+  }
 
-.nav-links a {
-  text-decoration: none;
-  color: #080808;
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
+  .project-card p {
+    font-size: 16px;
+  }
 
-.nav-links a:hover {
-  color: #146ef5;
-  transform: translateY(-3px);
+  .contact p {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
 }
