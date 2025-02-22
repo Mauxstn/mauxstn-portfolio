@@ -262,6 +262,8 @@ footer img.footer-logo {
   background-color: #007bff; /* Blue color */
   height: 20px;
   border-radius: 8px;
+  width: 0;
+  transition: width 2s ease-in-out;
 }
 
 .project {

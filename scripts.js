@@ -42,3 +42,21 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.carousel-button.next').addEventListener('click', nextSlide);
   document.querySelector('.carousel-button.prev').addEventListener('click', prevSlide);
 });
+
+function animateSkills() {
+  const skillsSection = document.querySelector('.skills');
+  const skills = document.querySelectorAll('.progress');
+  const skillsSectionTop = skillsSection.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (skillsSectionTop < windowHeight && skillsSectionTop > 0) {
+    skills.forEach(skill => {
+      const width = skill.getAttribute('data-width');
+      skill.style.transition = 'width 1.5s ease-in-out'; // Adjust the animation speed
+      skill.style.width = width;
+    });
+    window.removeEventListener('scroll', animateSkills);
+  }
+}
+
+window.addEventListener('scroll', animateSkills);

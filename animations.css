@@ -24,3 +24,15 @@
     transform: scale(1);
   }
 }
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.slide-in {
+  animation: slideIn 1s ease-in-out;
+}
+
+.zoom-in {
+  animation: zoomIn 2s ease-in-out;
+}
