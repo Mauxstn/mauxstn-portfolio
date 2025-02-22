@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mauxstn | Maurice</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Poppins Schriftart von Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
 </head>
 <body>
   <header>
@@ -24,19 +25,19 @@
   <main>
     <section id="home" class="hero">
       <div class="container">
-        <h1>Maurice | Mauxstn</h1>
-        <p>Hey, I'm Maurice. Designer. Developer. Creator.</p>
-        <a href="#work" class="btn-primary">View My Work</a>
+        <h1 class="fade-in">Maurice | Mauxstn</h1>
+        <p class="fade-in">Hey, I'm Maurice. Designer. Developer. Creator.</p>
+        <a href="#work" class="btn-primary fade-in">View My Work</a>
       </div>
     </section>
 
     <section id="about" class="about">
       <div class="container">
-        <h2>About Me</h2>
-        <p>I’m a 18-year-old designer from Stuttgart, Germany, working in UI/UX and graphic design. I’m currently learning coding (HTML, CSS, JS) and enjoy taking on new projects to improve my skills.</p>
+        <h2 class="slide-in">About Me</h2>
+        <p class="slide-in">I’m a 18-year-old designer from Stuttgart, Germany, working in UI/UX and graphic design. I’m currently learning coding (HTML, CSS, JS) and enjoy taking on new projects to improve my skills.</p>
 
-        <h3>Skills & Tools</h3>
-        <ul>
+        <h3 class="slide-in">Skills & Tools</h3>
+        <ul class="slide-in">
           <li>UI/UX Design</li>
           <li>Web Development (HTML, CSS, JavaScript)</li>
           <li>Figma, Photoshop</li>
@@ -46,20 +47,45 @@
       </div>
     </section>
 
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="skills-bar">
+          <div class="skill">
+            <h3>HTML</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>CSS</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 65%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>JavaScript</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 50%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="work" class="projects">
       <div class="container">
-        <h2>Work in Progress</h2>
+        <h2 class="slide-in">Work in Progress</h2>
         <div class="project-grid">
-          <div class="project-card">
+          <div class="project-card zoom-in">
             <h3>Lumina Dashboard</h3>
             <p>A modern productivity dashboard for tracking tasks, goals, and schedules efficiently.</p>
+            <a href="project.html" class="btn-primary">View Project</a>
           </div>
-          <div class="project-card">
+          <div class="project-card zoom-in">
             <h3>Custom Website Design</h3>
-<p>Currently working on expanding and enhancing this section of my portfolio.</p>
-
+            <p>Currently working on expanding and enhancing this section of my portfolio.</p>
           </div>
-          <div class="project-card">
+          <div class="project-card zoom-in">
             <h3>ClearDesk Homeworks Planner App</h3>
             <p>Developing a mobile app for students to track assignments and deadlines.</p>
           </div>
@@ -69,9 +95,9 @@
 
     <section id="contact" class="contact">
       <div class="container">
-        <h2>Contact</h2>
-        <p>Feel free to reach out for collaborations or inquiries.</p>
-        <a href="mailto:lumina.software.dev@gmail.com" class="btn-primary">Email Me</a>
+        <h2 class="slide-in">Contact</h2>
+        <p class="slide-in">Feel free to reach out for collaborations or inquiries.</p>
+        <a href="mailto:lumina.software.dev@gmail.com" class="btn-primary slide-in">Email Me</a>
       </div>
     </section>
   </main>
@@ -81,5 +107,9 @@
       <p>&copy; 2024 Mauxstn | Maurice</p>
     </div>
   </footer>
+
+  <button id="back-to-top" class="back-to-top">↑</button>
+
+  <script src="scripts.js"></script>
 </body>
 </html>

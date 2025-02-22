@@ -1,8 +1,8 @@
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  background-color: #fff;
-  color: #080808;
+  background-color: #f4f4f9;
+  color: #333;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,8 +17,8 @@ body {
 }
 
 header {
-  background-color: #fff;
-  padding: 30px 0;
+  background-color: #ffffff;
+  padding: 20px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -36,70 +36,72 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #080808;
-  font-size: 16px;
+  color: #333;
+  font-size: 18px;
   font-weight: bold;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #146ef5;
+  color: #007bff;
   transform: translateY(-3px);
 }
 
 .hero {
-  background-color: #f5f5f5;
-  padding: 120px 0;
+  background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+  color: #ffffff;
+  padding: 150px 0;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 72px;
-  color: #080808;
   margin: 0;
   font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
-  font-size: 26px;
-  color: #080808;
-  margin-top: 15px;
+  font-size: 28px;
+  margin-top: 20px;
   font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .hero .btn-primary {
-  background-color: #146ef5;
-  color: #fff;
+  background-color: #007bff;
+  color: #ffffff;
   padding: 20px 40px;
   text-decoration: none;
   border-radius: 8px;
   font-size: 20px;
-  margin-top: 30px;
+  margin-top: 40px;
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero .btn-primary:hover {
-  background-color: #125dd4;
+  background-color: #0056b3;
   transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .about {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .about p {
   font-size: 22px;
-  color: #080808;
-  line-height: 1.6;
+  line-height: 1.8;
   max-width: 900px;
   margin: 0 auto;
   font-weight: 400;
 }
 
 .projects {
-  background-color: #f5f5f5;
-  padding: 80px 0;
+  background-color: #ffffff;
+  padding: 100px 0;
 }
 
 .project-grid {
@@ -109,8 +111,8 @@ header {
 }
 
 .project-card {
-  background-color: #ffffff;
-  padding: 30px;
+  background-color: #f7f9fc;
+  padding: 40px;
   border-radius: 12px;
   flex: 1;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -118,15 +120,15 @@ header {
 
 .project-card h3 {
   font-size: 30px;
-  color: #146ef5;
-  margin-bottom: 15px;
+  color: #007bff;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
 .project-card p {
   font-size: 18px;
-  color: #000000;
-  font-weight: 600;
+  color: #7f8c8d;
+  font-weight: 400;
 }
 
 .project-card:hover {
@@ -135,41 +137,41 @@ header {
 }
 
 .contact {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .contact p {
   font-size: 22px;
-  color: #010101;
-  font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .contact .btn-primary {
-  background-color: #146ef5;
-  color: #fff;
+  background-color: #007bff;
+  color: #ffffff;
   padding: 20px 40px;
   text-decoration: none;
   border-radius: 8px;
   font-size: 20px;
-  margin-top: 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact .btn-primary:hover {
-  background-color: #125dd4;
+  background-color: #0056b3;
   transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 footer {
-  background-color: #146ef5;
-  padding: 10px 0;
+  background-color: #007bff;
+  padding: 20px 0;
   text-align: center;
 }
 
 footer p {
   font-size: 16px;
-  color: #fff;
+  color: #ffffff;
   font-weight: 400;
 }
 
@@ -192,29 +194,203 @@ footer img.footer-logo {
 
 .about ul li {
   font-size: 20px;
-  color: #080808;
+  color: #333;
   margin: 10px 0;
   font-weight: 500;
 }
 
 .about ul li::before {
   content: "•";
-  color: #146ef5;
+  color: #007bff;
   margin-right: 10px;
   font-size: 22px;
   vertical-align: middle;
 }
 
-.lumina-section {
-  background-color: #f5f5f5;
-  padding: 100px 0;
-  text-align: center;
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
 }
 
-.lumina-section p {
-  font-size: 24px;
-  color: #080808;
-  font-weight: 400;
+.back-to-top:hover {
+  background-color: #555;
+}
+
+.skills {
+  padding: 80px 0;
+  background-color: #f7f9fc;
+}
+
+.skills h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.skills-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill {
+  text-align: left;
+}
+
+.skill h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: #007bff; /* Blue color */
+  height: 20px;
+  border-radius: 8px;
+}
+
+.project {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.project h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.project p {
+  font-size: 20px;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.project-details {
+  text-align: left;
+  margin-top: 40px;
+}
+
+.project-details h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.project-details p {
+  font-size: 18px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.project-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-details ul li {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.project-details ul li::before {
+  content: "•";
+  color: #007bff;
+  margin-right: 10px;
+  font-size: 22px;
+  vertical-align: middle;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+  min-width: 100%;
+  height: auto;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: #999; /* Lighter shade of dark */
+  border: none;
+  font-size: 24px; /* Smaller size */
+  cursor: pointer;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover,
+.carousel-button:active {
+  color: #bbb; /* Slightly lighter dark color */
+}
+
+.btn-primary {
+  background: none;
+  color: #007bff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-top: 20px;
+  display: inline-block;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+  outline: none;
+  background-color: #0056b3;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -237,8 +413,8 @@ footer img.footer-logo {
   }
 
   .hero .btn-primary {
-    font-size: 18px;
-    padding: 15px 30px;
+    font-size: 16px;
+    padding: 10px 20px;
   }
 
   .project-grid {
@@ -250,12 +426,36 @@ footer img.footer-logo {
   }
 
   .contact .btn-primary {
-    font-size: 18px;
-    padding: 15px 30px;
+    font-size: 16px;
+    padding: 10px 20px;
   }
 
   footer p {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  .skills-bar {
+    flex-direction: column;
+  }
+
+  .project h1 {
+    font-size: 36px;
+  }
+
+  .project p {
+    font-size: 18px;
+  }
+
+  .project-details h2 {
+    font-size: 28px;
+  }
+
+  .project-details p {
+    font-size: 16px;
+  }
+
+  .project-details ul li {
+    font-size: 16px;
   }
 }
 
@@ -269,7 +469,7 @@ footer img.footer-logo {
   }
 
   .about p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .project-card h3 {
@@ -277,7 +477,7 @@ footer img.footer-logo {
   }
 
   .project-card p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .contact p {
@@ -286,5 +486,29 @@ footer img.footer-logo {
 
   footer p {
     font-size: 12px;
+  }
+
+  .skills-bar {
+    flex-direction: column;
+  }
+
+  .project h1 {
+    font-size: 28px;
+  }
+
+  .project p {
+    font-size: 16px;
+  }
+
+  .project-details h2 {
+    font-size: 24px;
+  }
+
+  .project-details p {
+    font-size: 14px;
+  }
+
+  .project-details ul li {
+    font-size: 14px;
   }
 }
