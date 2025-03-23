@@ -3,10 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mauxstn | Maurice</title>
+  <title>Mauxstn | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="animations.css">
+  <style>
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .social-links a {
+      color: var(--text-secondary);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      opacity: 0.7;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-color);
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .social-links {
+        gap: 1rem;
+      }
+
+      .social-links a {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -47,32 +100,6 @@
       </div>
     </section>
 
-    <section id="skills" class="skills">
-      <div class="container">
-        <h2 class="slide-in">My Skills</h2>
-        <div class="skills-bar">
-          <div class="skill">
-            <h3>HTML</h3>
-            <div class="progress-bar">
-              <div class="progress" data-width="70%"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <h3>CSS</h3>
-            <div class="progress-bar">
-              <div class="progress" data-width="65%"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <h3>JavaScript</h3>
-            <div class="progress-bar">
-              <div class="progress" data-width="50%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="work" class="projects">
       <div class="container">
         <h2 class="slide-in">Work in Progress</h2>
@@ -95,17 +122,23 @@
     </section>
 
     <section id="contact" class="contact">
-      <div class="container">
-        <h2 class="slide-in">Contact</h2>
-        <p class="slide-in">Feel free to reach out for collaborations or inquiries.</p>
-        <a href="mailto:lumina.software.dev@gmail.com" class="btn-primary slide-in">Email Me</a>
-      </div>
+      <h2 class="slide-in">Contact</h2>
+      <p class="slide-in">Feel free to reach out for collaborations or inquiries.</p>
+      <button onclick="window.location.href='mailto:lumina.software.dev@gmail.com'" class="contact-btn">Email Me</button>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Mauxstn | Maurice</p>
+      <div class="footer-content">
+        <span>&copy; 2025 Mauxstn | Maurice</span>
+        <div class="social-links">
+          <a href="https://behance.net/mauxstn" target="_blank" title="Behance"><i class="fab fa-behance"></i></a>
+          <a href="https://discord.gg/mauxstn" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+          <a href="https://instagram.com/mauxstn" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/mauxstn1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
 

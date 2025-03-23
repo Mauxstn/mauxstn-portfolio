@@ -5,8 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Presentation | Mauxstn</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="animations.css">
+  <style>
+    .project-details {
+      padding-top: 8rem;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1400px;
+      margin: 3rem auto;
+    }
+
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      height: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .slider-dots {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      padding: 0.75rem 1.25rem;
+      border-radius: 1rem;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .dot.active {
+      background: var(--accent-color);
+      transform: scale(1.2);
+    }
+
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .social-links a {
+      color: var(--text-secondary);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      opacity: 0.7;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-color);
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .slider-container {
+        height: 50vh;
+        min-height: 400px;
+      }
+
+      .slider-dots {
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .social-links {
+        gap: 1rem;
+      }
+
+      .social-links a {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -28,13 +165,22 @@
         <h1 class="fade-in">Lumina Dashboard</h1>
         <p class="fade-in">Lumina is a modern productivity dashboard designed to help users track tasks, goals, and schedules efficiently. It combines a sleek user interface with powerful features to enhance productivity and task management.</p>
         
-        <div class="carousel fade-in">
-          <div class="carousel-images">
-            <img src="images/Welcome.png" alt="Welcome Image" class="carousel-image">
-            <img src="images/Main.jpg" alt="Main Image" class="carousel-image">
+        <div class="slider-wrapper">
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <img src="images/Welcome.png" alt="Welcome Image">
+              </div>
+              <div class="slide">
+                <img src="images/Main.jpg" alt="Main Image">
+              </div>
+            </div>
           </div>
-          <button class="carousel-button prev">&#10094;</button>
-          <button class="carousel-button next">&#10095;</button>
+          
+          <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
         </div>
         
         <div class="project-details">
@@ -52,12 +198,77 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Mauxstn | Maurice</p>
+      <div class="footer-content">
+        <span>&copy; 2025 Mauxstn | Maurice</span>
+        <div class="social-links">
+          <a href="https://behance.net/mauxstn" target="_blank" title="Behance"><i class="fab fa-behance"></i></a>
+          <a href="https://discord.gg/mauxstn" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+          <a href="https://instagram.com/mauxstn" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/mauxstn1" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <button id="back-to-top" class="back-to-top">↑</button>
 
+  <script>
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateSlider();
+      });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+      if (e.key === 'ArrowRight') {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+      }
+    });
+
+    // Touch support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    slider.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 50) {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+      }
+      if (touchEndX - touchStartX > 50) {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+    });
+  </script>
   <script src="scripts.js"></script>
 </body>
 </html>
